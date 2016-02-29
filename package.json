@@ -1,0 +1,31 @@
+{
+  "name": "german",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rostyy/Chat.git"
+  },
+   "devDependencies": {
+    "http-server": "^0.6.1",
+    "karma": "^0.12.16",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-jasmine": "~0.1.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rostyy/Chat/issues"
+  },
+  "scripts": {
+    "start": "http-server -a 0.0.0.0 -p 8000",
+    "test": "node node_modules/karma/bin/karma start test/karma.conf.js",
+    "test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js  --single-run"
+  },
+  "homepage": "https://github.com/Rostyy/Chat#readme"
+}

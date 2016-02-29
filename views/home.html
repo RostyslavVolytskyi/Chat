@@ -1,0 +1,72 @@
+<header>
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header" In Browser Chat>
+        <span class="navbar-brand" ng-bind="dictionary.chatHeader"></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <div class="panel panel-primary">
+        <div class="panel-heading" ng-bind="dictionary.chat1"></div>
+        <div class="panel-body">
+          <form class="form-group" ng-submit="addMsg(storeMessages.storage1Msg)">
+            <div class="textareaDiv">
+                <ul>
+                  <li class="enterMsg msgLight1" ng-bind="chat2text"></li>
+                  <li ng-repeat="msg in getFromStorage1Msgs | orderBy:'-'">
+                    <span ng-bind="msg.text"></span>
+                  </li>
+                </ul>
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Type message..." ng-model="chat1text">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit" ng-bind="dictionary.sendBtn"></button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <button class="btn btn-warning" ng-click="clearChat(storeMessages.storage1Msg)" ng-bind="dictionary.clear + ' ' + dictionary.chat1"></button>
+      <button class="btn btn-warning" ng-click="clearChat(storeMessages.storage2Msg)" ng-bind="dictionary.clear + ' ' + dictionary.chat2"></button>
+      <button class="btn btn-danger" ng-click="clearChat()" ng-bind="dictionary.clearAll"></button>
+
+    </div>
+
+    <div class="col-md-6">
+
+      <div class="panel panel-primary">
+        <div class="panel-heading" ng-bind="dictionary.chat2"></div>
+        <div class="panel-body">
+          <form class="form-group" ng-submit="addMsg(storeMessages.storage2Msg)">
+            <div class="textareaDiv">
+              <ul>
+                <li class="enterMsg msgLight2" ng-bind="chat1text"></li>
+
+                <li ng-repeat="msg in getFromStorage2Msgs | orderBy:'-'">
+                  <span ng-bind="msg.text"></span>
+                </li>
+              </ul>
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Type message..." ng-model="chat2text">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit" ng-bind="dictionary.sendBtn"></button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
