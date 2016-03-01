@@ -4,7 +4,7 @@
     "rostyslav <rostyslav.volytskyi@symphony-solutions.eu>"
   ],
   "description": "",
-  "main": "",
+  "main": "app.js",
   "moduleType": [],
   "license": "MIT",
   "homepage": "",
@@ -20,6 +20,8 @@
     "bootstrap": "^3.3.6",
     "angular-local-storage": "^0.2.5",
     "ng-resource": "^0.0.2",
-    "angular-resource": "^1.5.0"
+    "angular-resource": "^1.5.0",
+    "angular-route-segment": "^1.5.1",
+    "angular-route": "^1.5.0"
   }
 }

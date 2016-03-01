@@ -4,90 +4,22 @@
   <meta charset="UTF-8">
   <title>AngularJS Test Aufgabe</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="styles/main.css">
 
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="main.js"></script>
-  <script src="userService.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-route-segment/build/angular-route-segment.js"></script>
 
 </head>
 <body>
 
-  <header>
-    <div class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <span class="navbar-brand"><span class="glyphicon glyphicon-envelope"></span> In Browser Chat</span>
-        </div>
-      </div>
-    </div>
-  </header>
+  <div id="contents" app-view-segment="0"></div>
 
-  <div class="container" ng-controller="mainCtrl">
-
-    <div class="row">
-      <div class="col-md-6">
-
-        <div class="panel panel-primary">
-          <div class="panel-heading">{{chat1}}</div>
-          <div class="panel-body">
-            <form class="form-group" ng-submit="addMsg1();">
-              <div class="textareaDiv">
-                  <ul>
-                    <li class="enterMsg msgLight1">{{chat2text}}</li>
-                    <li ng-repeat="msg in getFromStorage1Msgs | orderBy:'-'">
-                      <span>{{msg.text}}</span>
-                    </li>
-                  </ul>
-              </div>
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Type message..." ng-model="chat1text">
-                <span class="input-group-btn">
-                  <button class="btn btn-primary" type="submit">{{sendBtn}}</button>
-                </span>
-              </div>
-            </form>
-          </div>
-        </div>
-
-          <button class="btn btn-warning" ng-click="clearChat1();">{{clear + " " + chat1}}</button>
-          <button class="btn btn-warning" ng-click="clearChat2();">{{clear + " " + chat2}}</button>
-          <button class="btn btn-danger" ng-click="clearChats();">{{clearAll}}</button>
-
-      </div>
-
-      <div class="col-md-6">
-
-        <div class="panel panel-primary">
-          <div class="panel-heading">{{chat2}}</div>
-          <div class="panel-body">
-            <form class="form-group" ng-submit="addMsg2();">
-              <div class="textareaDiv">
-                <ul>
-                  <li class="enterMsg msgLight2">{{chat1text}}</li>
-                  <li ng-repeat="msg in getFromStorage2Msgs | orderBy:'-'">
-                    <span>{{msg.text}}</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Type message..." ng-model="chat2text">
-                <span class="input-group-btn">
-                  <button class="btn btn-primary" type="submit">{{sendBtn}}</button>
-                </span>
-              </div>
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
-
-
+  <script src="app.js"></script>
+  <script src="scripts/services/msgService.js"></script>
+  <script src="scripts/services/msgFactory.js"></script>
+  <script src="scripts/constants/const.js"></script>
 </body>
 </html>
