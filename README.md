@@ -11,3 +11,5 @@ To load folder and bootstrap app please follow next steps:
 4. npm start
 
 should start on http://localhost:8000/
+
+5. start with unit tests: npm run serve
