@@ -1,6 +1,6 @@
 # Chat
 
-To load folder and bootstrap app foolow next steps:
+To load folder and bootstrap app please follow next steps:
 
 1. git clone https://github.com/Rostyy/Chat.git to your local repository
 
