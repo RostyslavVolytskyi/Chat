@@ -25,7 +25,8 @@
   "scripts": {
     "start": "http-server -a 0.0.0.0 -p 8000",
     "test": "node node_modules/karma/bin/karma start test/karma.conf.js",
-    "test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js  --single-run"
+    "test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js  --single-run",
+    "serve": "npm run test-single-run && npm start"
   },
   "homepage": "https://github.com/Rostyy/Chat#readme"
 }

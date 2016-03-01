@@ -1,6 +1,6 @@
 'use strict';
 
-var myApp = angular.module("myApp", ['LocalStorageModule', 'ngResource', 'ngRoute', 'route-segment', 'view-segment']);
+var myApp = angular.module('myApp', ['LocalStorageModule', 'ngResource', 'ngRoute', 'route-segment', 'view-segment']);
 
 myApp
   .controller('mainCtrl', ['$scope', 'localStorageService', 'CHAT_BOX_WORDS', 'msgFactory', 'STORAGE_MESSAGES', 'messageData',

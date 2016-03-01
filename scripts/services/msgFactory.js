@@ -5,7 +5,7 @@ myApp.factory('msgFactory', ['msgService', 'MESSAGE_SERVICE_ENDPOINT', 'localSto
   
   function getMessages(){
     if(MESSAGE_SERVICE_ENDPOINT.length) {
-      return msgService.get().$promise;
+      return msgService.get();
     } else {
       return [localStorageService.get(STORAGE_MESSAGES.storage1Msg),
               localStorageService.get(STORAGE_MESSAGES.storage2Msg)];
