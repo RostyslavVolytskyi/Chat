@@ -1,4 +1,4 @@
-# Chat
+# In Browser Chat
 
 To load folder and bootstrap app please follow next steps:
 
